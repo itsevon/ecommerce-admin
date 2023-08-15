@@ -5,6 +5,7 @@ import { ClerkProvider } from '@clerk/nextjs'
 
 //personal imports
 import { ModalProvider } from '@/providers/modal-provider'
+import { ToasterProvider } from '@/providers/toast-provider'
 
 //relative import from ./
 import './globals.css'
@@ -27,6 +28,7 @@ export default function RootLayout({
     <ClerkProvider>
     <html lang="en">
       <body className={inter.className}>
+        <ToasterProvider />
         <ModalProvider />
         {children}
       </body>
