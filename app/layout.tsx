@@ -8,6 +8,7 @@ import { ModalProvider } from '@/providers/modal-provider'
 
 //relative import from ./
 import './globals.css'
+import prismadb from '@/lib/prismadb'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -21,6 +22,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+
   return (
     <ClerkProvider>
     <html lang="en">
